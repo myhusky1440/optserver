@@ -23,7 +23,7 @@ function writerFile(str,fileUrl,callback) {
                 return console.error(err);
             }
             console.log("异步读取文件数据: " + data.toString());
-            callback(str)
+            callback(data.toString())
         });
     });
 }

@@ -19,7 +19,7 @@ router.get('/sendKey', function(req, res, next) {
 
     let fileUrl = resolve(config.fileUrl);
     let num = readFile(fileUrl);
-console.log("开始数字"+num)
+    console.log("开始数字"+num)
     let flag = false;
     function send(num) {
         res.send(num);
@@ -30,8 +30,7 @@ console.log("开始数字"+num)
         if(flag){
             num = i;
             writerFile(i,fileUrl,send);
-
-
+            return;
         }
     }
     if(!flag){
